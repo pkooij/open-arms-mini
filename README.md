@@ -4,7 +4,7 @@
 
 ![Open Arms Mini with wrist strap](images/openarm-mini2.jpg)
 
-*Open Arms Mini leader arm with wrist strap — designed for precise, high-speed teleoperation*
+*Open Arms Mini leader arm with wrist strap, designed for precise, fast teleoperation*
 
 ---
 
