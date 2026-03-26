@@ -1,6 +1,6 @@
 # Bill of Materials — Open Arms Mini
 
-**Approximate total cost: ~140 EUR per arm** (excluding 3D printing materials and screws)
+**Approximate total cost: ~150 EUR per arm**
 
 ---
 
@@ -37,5 +37,4 @@ Approximate filament cost: ~4–6 EUR at standard PLA prices.
 | Electronics | ~22 EUR |
 | Wrist strap | ~5 EUR |
 | Filament | ~5 EUR |
-| Screws & cables | ~5 EUR |
-| **Total** | **~157 EUR** |
+| **Total** | **~152 EUR** |
