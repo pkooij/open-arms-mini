@@ -8,7 +8,7 @@
 
 ## What is Open Arms Mini?
 
-Open Arms Mini is a compact, Feetech-based, 3D-printed leader arm for robot teleoperation. It has 7 DOF with human-like kinematics — 3 shoulder joints, 1 elbow, 1 forearm rotation, and 2 wrist joints — plus a gripper. It integrates directly with [LeRobot](https://github.com/huggingface/lerobot) as the `openarm_mini` teleoperator.
+Open Arms Mini is a compact, Feetech-based, 3D-printed leader arm for robot teleoperation. It has 7 DOF with human-like kinematics — 3 shoulder joints, 1 elbow, 1 forearm rotation, and 2 wrist joints — plus a gripper. It is designed to be paired with the [Open Arms follower arm](https://github.com/huggingface/lerobot) and integrates directly with [LeRobot](https://github.com/huggingface/lerobot) as the `openarm_mini` teleoperator.
 
 ### Design goals
 
@@ -120,6 +120,8 @@ Follow the prompts to set motor IDs 1–8 in order.
 | 7 | Wrist Roll | J7 |
 | 8 | Gripper | J8 L/R |
 
+> **Note on joint ordering:** The wrist flex (joint 6) and wrist roll (joint 7) are deliberately swapped in software relative to the follower arm's joint numbering. This order feels more natural to operate because of how the human wrist moves. The swap is handled in the `openarm_mini` LeRobot driver — no manual remapping needed.
+
 #### Assembly order
 
 1. **Shoulder Pan (J1)** — Insert motor 1 into J1. Secure with 4× M2×6 screws. Attach J1_holder with 2× M2×6 screws. Install both motor horns; secure top horn with 1× M3×6 screw.
@@ -171,7 +173,7 @@ lerobot-calibrate \
 
 ### Teleoperate
 
-Pair Open Arms Mini with an SO-101 follower arm:
+Pair Open Arms Mini with an Open Arms follower arm:
 
 ```bash
 lerobot-teleoperate \
