@@ -2,9 +2,7 @@
 
 **Small, low-inertia leader arms for robot teleoperation**
 
-![Open Arms Mini with wrist strap](images/openarm-mini2.jpg)
-
-*Open Arms Mini leader arm with wrist strap, designed for precise, fast teleoperation*
+<img src="images/openarm-mini2.jpg" width="480" alt="Open Arms Mini with wrist strap" />
 
 ---
 
@@ -12,30 +10,19 @@
 
 Open Arms Mini is a compact, Feetech-based, 3D-printed leader arm designed for teleoperation of robot manipulators. It is based on the SO-101 design and pairs directly with SO-101 or SO-100 follower arms using [LeRobot](https://github.com/huggingface/lerobot).
 
-### Why not just use a full-size arm as a leader?
+### Design goals
 
-We started teleoperation with full-size Open Arms as leader arms — the same kinematics as the follower, one-to-one mapping. It seemed like the natural choice. In practice, two problems emerged:
+Open Arms Mini was designed around three requirements that matter for real teleoperation deployments:
 
-1. **Too much inertia.** Full-size arms are heavy enough that operators couldn't move quickly or precisely. Tasks like cloth folding require fast, deliberate wrist motions that full-size leaders simply can't support comfortably.
-2. **Operator size mismatch.** A leader arm sized for one person is awkward for another. Operators varied significantly in height, making consistent, repeatable motions hard to achieve.
-
-Open Arms Mini solves both:
-
-| Property | Full-size leader | Open Arms Mini |
-|---|---|---|
-| Inertia | High — tiring, imprecise | Low — quick, deliberate |
-| Arm-length fit | Fixed kinematics | Wrist-grip, works for anyone |
-| Cost per arm | ~400 EUR | **~120 EUR** |
-| DAgger support | Yes | Yes |
-| Wrist precision | Low without strap | High with wrist strap |
+- **Low inertia** — operators can make quick, deliberate motions that precision tasks like cloth folding demand
+- **Arm-length agnostic** — wrist-grip design works for teleoperators of any height
+- **Affordable** — ~120 EUR per arm makes it easy to set up multiple stations
 
 ### The wrist strap
 
-One detail turned out to be critical: the wrist strap. Without it, wrist rotations are imprecise — the hand slips relative to the arm. With the strap, the operator's wrist is locked into the handle, giving exact wrist roll control. This is essential for cloth manipulation and any task requiring precise end-effector orientation.
+The wrist strap makes a big difference for wrist roll precision — without it the hand tends to slip. With it, wrist control is solid. Highly recommended.
 
-![Open Arms Mini paired with follower](images/openarm-mini1.jpg)
-
-*Open Arms Mini (white, left) paired with a full-size follower arm (black, right)*
+<img src="images/openarm-mini1.jpg" width="480" alt="Open Arms Mini paired with follower arm" />
 
 ---
 
