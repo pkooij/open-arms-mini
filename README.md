@@ -30,7 +30,7 @@ The wrist strap makes a big difference for wrist roll precision — without it t
 
 See [BOM.md](BOM.md) for the full bill of materials with links and prices.
 
-**Approximate cost: ~150 EUR per arm** (excluding 3D printing filament and screws).
+**Approximate cost: ~150 EUR per arm / ~300 EUR for a pair** (excluding 3D printing filament and screws).
 
 ---
 
@@ -52,35 +52,39 @@ All parts print without post-processing beyond removing supports. A standard FDM
 
 All STL files are in the [`STL/`](STL/) directory. STEP files (for modification) are in [`STEP/`](STEP/).
 
-| File | Description | Qty |
+Quantities are for a **complete pair (left + right arm)**. Parts without an L/R suffix are universal — print 2, one per arm. Parts with L or R in the name are side-specific to the gripper.
+
+| File | Description | Qty (pair) |
 |---|---|---|
-| `J1 v5.stl` | Base / shoulder pan joint | 1 |
-| `J1_holder v1.stl` | Shoulder pan motor holder | 1 |
-| `J2 v2.stl` | Shoulder lift joint | 1 |
-| `J2_holder v1.stl` | Shoulder lift motor holder | 1 |
-| `J3 v2.stl` | Elbow flex joint | 1 |
-| `J4 v3.stl` | Wrist flex joint | 1 |
-| `J4_holder v1.stl` | Wrist flex motor holder | 1 |
-| `J5 v4.stl` | Wrist roll joint | 1 |
-| `J6 v6.stl` | Gripper body | 1 |
-| `J6 holder with strap v4.stl` | Gripper / wrist strap holder | 1 |
-| `J7 v4.stl` | Handle connector | 1 |
-| `J7_holder v1.stl` | Handle motor holder | 1 |
-| `J8 L v4.stl` | Gripper claw — left | 1 |
-| `J8 R v10.stl` | Gripper claw — right | 1 |
-| `J8 holder L v2.stl` | Gripper claw holder — left | 1 |
-| `J8 holder R v6.stl` | Gripper claw holder — right | 1 |
-| `J Handle v12.stl` | Main handle | 1 |
-| `J trigger L v2.stl` | Trigger — left | 1 |
-| `J trigger R v2.stl` | Trigger — right | 1 |
-| `WaveShare_Mounting_Plate_SO101 v1.stl` | WaveShare servo controller mounting plate | 1 |
-| `arducam_holder v6.stl` | Arducam camera mount (optional) | 1 |
+| `J1 v5.stl` | Shoulder pan joint | 2 |
+| `J1_holder v1.stl` | Shoulder pan motor holder | 2 |
+| `J2 v2.stl` | Shoulder lift joint | 2 |
+| `J2_holder v1.stl` | Shoulder lift motor holder | 2 |
+| `J3 v2.stl` | Shoulder roll joint | 2 |
+| `J4 v3.stl` | Elbow joint | 2 |
+| `J4_holder v1.stl` | Elbow motor holder | 2 |
+| `J5 v4.stl` | Forearm rotation joint | 2 |
+| `J6 v6.stl` | Wrist flex joint | 2 |
+| `J6 holder with strap v4.stl` | Wrist strap holder | 2 |
+| `J7 v4.stl` | Wrist roll joint | 2 |
+| `J7_holder v1.stl` | Wrist roll motor holder | 2 |
+| `J Handle v12.stl` | Main handle | 2 |
+| `J8 L v4.stl` | Gripper claw — left | 2 |
+| `J8 R v10.stl` | Gripper claw — right | 2 |
+| `J8 holder L v2.stl` | Gripper claw holder — left | 2 |
+| `J8 holder R v6.stl` | Gripper claw holder — right | 2 |
+| `J trigger L v2.stl` | Gripper trigger — left | 2 |
+| `J trigger R v2.stl` | Gripper trigger — right | 2 |
+| `WaveShare_Mounting_Plate_SO101 v1.stl` | WaveShare controller mounting plate | 2 |
+| `arducam_holder v6.stl` | Arducam camera mount (optional) | 2 |
 
 ---
 
 ## Assembly
 
 ### Hardware required
+
+Per arm:
 
 - 8× Feetech STS3215-C046 servo (7.4 V, 1:147 gear ratio)
 - 1× Waveshare Serial Bus Servo Driver Board
