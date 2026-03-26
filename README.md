@@ -147,7 +147,7 @@ Follow the prompts to set motor IDs 1–6 in order.
 
 ## LeRobot Integration
 
-Open Arms Mini is fully supported by [LeRobot](https://github.com/huggingface/lerobot) as a `so101_leader` teleoperator.
+Open Arms Mini is natively integrated into [LeRobot](https://github.com/huggingface/lerobot) as a first-class teleoperator. The implementation lives at [`lerobot/teleoperators/openarm_mini`](https://github.com/huggingface/lerobot/tree/main/src/lerobot/teleoperators/openarm_mini).
 
 ### Install LeRobot
 
@@ -165,7 +165,7 @@ lerobot-find-port
 
 ```bash
 lerobot-setup-motors \
-    --teleop.type=so101_leader \
+    --teleop.type=openarm_mini \
     --teleop.port=/dev/tty.usbmodem575E0031751
 ```
 
@@ -173,7 +173,7 @@ lerobot-setup-motors \
 
 ```bash
 lerobot-calibrate \
-    --teleop.type=so101_leader \
+    --teleop.type=openarm_mini \
     --teleop.port=/dev/tty.usbmodem575E0031751 \
     --teleop.id=my_mini_leader_arm
 ```
@@ -187,12 +187,14 @@ lerobot-teleoperate \
     --robot.type=so101_follower \
     --robot.port=/dev/tty.usbmodem585A0076841 \
     --robot.id=my_follower \
-    --teleop.type=so101_leader \
+    --teleop.type=openarm_mini \
     --teleop.port=/dev/tty.usbmodem575E0031751 \
     --teleop.id=my_mini_leader_arm
 ```
 
 Full instructions: [LeRobot SO-101 documentation](https://huggingface.co/docs/lerobot/so101)
+
+LeRobot teleoperator source: [`lerobot/teleoperators/openarm_mini`](https://github.com/huggingface/lerobot/tree/main/src/lerobot/teleoperators/openarm_mini)
 
 ---
 
