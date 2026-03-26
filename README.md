@@ -69,8 +69,8 @@ Quantities are for a **complete pair (left + right arm)**. Parts without an L/R 
 | `J7 v4.stl` | Wrist roll joint | 2 |
 | `J7_holder v1.stl` | Wrist roll motor holder | 2 |
 | `J Handle v12.stl` | Main handle | 2 |
-| `J8 L v4.stl` | Gripper claw — left | 2 |
-| `J8 R v10.stl` | Gripper claw — right | 2 |
+| `J8 L v4.stl` | Gripper claw — left | 1 |
+| `J8 R v10.stl` | Gripper claw — right | 1 |
 | `J8 holder L v2.stl` | Gripper claw holder — left | 1 |
 | `J8 holder R v6.stl` | Gripper claw holder — right | 1 |
 | `J trigger L v2.stl` | Gripper trigger — left | 1 |
