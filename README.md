@@ -8,7 +8,7 @@
 
 ## What is Open Arms Mini?
 
-Open Arms Mini is a compact, Feetech-based, 3D-printed leader arm designed for teleoperation of robot manipulators. It is based on the SO-101 design and pairs directly with SO-101 or SO-100 follower arms using [LeRobot](https://github.com/huggingface/lerobot).
+Open Arms Mini is a compact, Feetech-based, 3D-printed leader arm for robot teleoperation. It has 7 DOF with human-like kinematics — 3 shoulder joints, 1 elbow, 1 forearm rotation, and 2 wrist joints — plus a gripper. It integrates directly with [LeRobot](https://github.com/huggingface/lerobot) as the `openarm_mini` teleoperator.
 
 ### Design goals
 
@@ -16,7 +16,7 @@ Open Arms Mini was designed around three requirements that matter for real teleo
 
 - **Low inertia** — operators can make quick, deliberate motions that precision tasks like cloth folding demand
 - **Arm-length agnostic** — wrist-grip design works for teleoperators of any height
-- **Affordable** — ~120 EUR per arm makes it easy to set up multiple stations
+- **Affordable** — ~150 EUR per arm makes it easy to set up multiple stations
 
 ### The wrist strap
 
@@ -30,7 +30,7 @@ The wrist strap makes a big difference for wrist roll precision — without it t
 
 See [BOM.md](BOM.md) for the full bill of materials with links and prices.
 
-**Approximate cost: ~120 EUR per arm** (excluding 3D printing filament and screws).
+**Approximate cost: ~150 EUR per arm** (excluding 3D printing filament and screws).
 
 ---
 
@@ -82,12 +82,12 @@ All STL files are in the [`STL/`](STL/) directory. STEP files (for modification)
 
 ### Hardware required
 
-- 6× Feetech STS3215-C046 servo (7.4 V, 1:147 gear ratio)
+- 8× Feetech STS3215-C046 servo (7.4 V, 1:147 gear ratio)
 - 1× Waveshare Serial Bus Servo Driver Board
-- M2×6 mm screws (×~30)
-- M3×6 mm screws (×~30)
-- Motor horn screws M3×6 mm (×6, one per motor — usually included with motors)
-- 3-pin servo cables (×6)
+- M2×6 mm screws (×~35)
+- M3×6 mm screws (×~35)
+- Motor horn screws M3×6 mm (×8, one per motor — usually included with motors)
+- 3-pin servo cables (×8)
 - 7.5 V DC power supply (2 A or more)
 - 1× Velcro/elastic wrist strap (~25 mm wide)
 
@@ -101,34 +101,38 @@ Connect each motor individually to the Waveshare board and run:
 
 ```bash
 lerobot-setup-motors \
-    --teleop.type=so101_leader \
+    --teleop.type=openarm_mini \
     --teleop.port=/dev/tty.usbmodem575E0031751
 ```
 
-Follow the prompts to set motor IDs 1–6 in order.
+Follow the prompts to set motor IDs 1–8 in order.
 
 #### Motor ID assignment
 
 | ID | Joint | Part |
 |---|---|---|
-| 1 | Base / Shoulder Pan | J1 |
+| 1 | Shoulder Pan | J1 |
 | 2 | Shoulder Lift | J2 |
-| 3 | Elbow Flex | J3 |
-| 4 | Wrist Flex | J4 |
-| 5 | Wrist Roll | J5 |
-| 6 | Gripper | J6 + J8 L/R |
+| 3 | Shoulder Roll | J3 |
+| 4 | Elbow Flex | J4 |
+| 5 | Forearm Rotation | J5 |
+| 6 | Wrist Flex | J6 |
+| 7 | Wrist Roll | J7 |
+| 8 | Gripper | J8 L/R |
 
 #### Assembly order
 
-1. **Joint 1 (Base)** — Insert motor 1 into J1. Secure with 4× M2×6 screws. Attach J1_holder with 2× M2×6 screws. Install both motor horns; secure top horn with 1× M3×6 screw.
-2. **Joint 2 (Shoulder)** — Slide motor 2 into J2 from above. Fasten with 4× M2×6 screws. Attach both motor horns with 1× M3×6 horn screw. Connect J2 to J1 with 4× M3×6 screws each side.
-3. **Joint 3 (Elbow)** — Insert motor 3 into J3. Fasten with 4× M2×6 screws. Attach motor horns. Connect J3 to J2 with 4× M3×6 screws each side.
-4. **Joint 4 (Wrist Flex)** — Slide J4_holder over J3. Insert motor 4 and fasten with 4× M2×6 screws. Attach both motor horns with horn screw.
-5. **Joint 5 (Wrist Roll)** — Insert motor 5 into J5 and secure with 2× M2×6 front screws. Install one motor horn only. Secure J5 to motor 4 with 4× M3×6 screws each side.
-6. **Gripper** — Attach J6 to motor 5 horn with 4× M3×6 screws. Insert motor 6 and secure with 2× M2×6 screws each side. Attach motor horns. Install J8 L and J8 R gripper claws with J8 holders, using 4× M3×6 screws each side. Attach triggers (J trigger L, J trigger R).
-7. **Handle** — Attach J Handle to the gripper body. Mount J6 holder with strap around the wrist area.
-8. **Wrist strap** — Thread a 25 mm elastic velcro strap through the strap holder on J6. Adjust tightness so the operator's wrist is firmly locked but comfortable.
-9. **Controller board** — Mount the Waveshare board on the WaveShare_Mounting_Plate_SO101 and attach to the base. Daisy-chain all motors with 3-pin cables from motor 1 (shoulder pan) through to motor 6 (gripper).
+1. **Shoulder Pan (J1)** — Insert motor 1 into J1. Secure with 4× M2×6 screws. Attach J1_holder with 2× M2×6 screws. Install both motor horns; secure top horn with 1× M3×6 screw.
+2. **Shoulder Lift (J2)** — Slide motor 2 into J2. Fasten with 4× M2×6 screws. Attach both motor horns with horn screw. Connect J2 to J1 with 4× M3×6 screws each side.
+3. **Shoulder Roll (J3)** — Insert motor 3 into J3. Fasten with 4× M2×6 screws. Attach motor horns. Connect J3 to J2 with 4× M3×6 screws each side.
+4. **Elbow (J4)** — Slide J4_holder over J3. Insert motor 4 and fasten with 4× M2×6 screws. Attach both motor horns with horn screw.
+5. **Forearm Rotation (J5)** — Insert motor 5 into J5 and secure with 2× M2×6 front screws. Install one motor horn only. Secure J5 to motor 4 with 4× M3×6 screws each side.
+6. **Wrist Flex (J6)** — Attach J6 to motor 5 horn with 4× M3×6 screws. Insert motor 6 and secure with 2× M2×6 screws. Attach both motor horns.
+7. **Wrist Roll (J7)** — Attach J7 to motor 6 with J7_holder. Insert motor 7 and fasten with 4× M2×6 screws.
+8. **Gripper** — Insert motor 8 into J8 L/R holders. Attach gripper claws with 4× M3×6 screws each side. Attach triggers (J trigger L, J trigger R).
+9. **Handle** — Attach J Handle to the gripper body. Mount J6 holder with strap around the wrist area.
+10. **Wrist strap** — Thread a 25 mm elastic velcro strap through the strap holder. Adjust for a snug fit.
+11. **Controller board** — Mount the Waveshare board on the WaveShare_Mounting_Plate_SO101 and attach to the base. Daisy-chain all motors with 3-pin cables from motor 1 through to motor 8.
 
 ---
 
