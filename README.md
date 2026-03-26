@@ -52,7 +52,7 @@ All parts print without post-processing beyond removing supports. A standard FDM
 
 All STL files are in the [`STL/`](STL/) directory. STEP files (for modification) are in [`STEP/`](STEP/).
 
-Quantities are for a **complete pair (left + right arm)**. Parts without an L/R suffix are universal — print 2, one per arm. Parts with L or R in the name are side-specific to the gripper.
+Quantities are for a **complete pair (left + right arm)**. Parts without an L/R suffix are universal — print 2, one per arm. The WaveShare mounting plate is shared between both arms (qty 1). **Total: 32 printed parts for a pair** (16 per arm).
 
 | File | Description | Qty (pair) |
 |---|---|---|
@@ -75,8 +75,8 @@ Quantities are for a **complete pair (left + right arm)**. Parts without an L/R 
 | `J8 holder R v6.stl` | Gripper claw holder — right | 2 |
 | `J trigger L v2.stl` | Gripper trigger — left | 2 |
 | `J trigger R v2.stl` | Gripper trigger — right | 2 |
-| `WaveShare_Mounting_Plate_SO101 v1.stl` | WaveShare controller mounting plate | 2 |
-| `arducam_holder v6.stl` | Arducam camera mount (optional) | 2 |
+| `WaveShare_Mounting_Plate_SO101 v1.stl` | WaveShare controller mounting plate (shared) | 1 |
+| `arducam_holder v6.stl` | Arducam camera mount (optional) | — |
 
 ---
 
