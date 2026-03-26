@@ -73,8 +73,8 @@ Quantities are for a **complete pair (left + right arm)**. Parts without an L/R 
 | `J8 R v10.stl` | Gripper claw — right | 2 |
 | `J8 holder L v2.stl` | Gripper claw holder — left | 1 |
 | `J8 holder R v6.stl` | Gripper claw holder — right | 1 |
-| `J trigger L v2.stl` | Gripper trigger — left | 2 |
-| `J trigger R v2.stl` | Gripper trigger — right | 2 |
+| `J trigger L v2.stl` | Gripper trigger — left | 1 |
+| `J trigger R v2.stl` | Gripper trigger — right | 1 |
 | `WaveShare_Mounting_Plate_SO101 v1.stl` | WaveShare controller mounting plate (shared) | 1 |
 | `arducam_holder v6.stl` | Arducam camera mount (optional) | — |
 
