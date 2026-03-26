@@ -135,8 +135,6 @@ lerobot-teleoperate \
     --teleop.id=my_mini_leader_arm
 ```
 
-Full docs: [huggingface.co/docs/lerobot/so101](https://huggingface.co/docs/lerobot/so101)
-
 ---
 
 ## License
