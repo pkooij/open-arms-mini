@@ -19,15 +19,6 @@
 |---|---|---|---|---|
 | Elastic velcro wrist strap (~25 mm wide) | 1 | ~5 EUR | ~5 EUR | [Amazon FR](https://www.amazon.fr/-/en/Elastic-Straps-Fasteners-Anti-Slip-Organizing/dp/B0CH9LX6KZ) |
 
-## Fasteners
-
-| Component | Qty | Notes |
-|---|---|---|
-| M2×6 mm screws | ~35 | Motor mounting |
-| M3×6 mm screws | ~35 | Structural joints |
-| M3×6 mm horn screws | 8 | One per motor horn — usually included with motors |
-| 3-pin servo cables (150–200 mm) | 8 | Daisy-chain between motors |
-
 ## 3D Printing
 
 | Material | Amount (estimate per arm) |
